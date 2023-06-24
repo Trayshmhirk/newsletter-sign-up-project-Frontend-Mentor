@@ -61,6 +61,13 @@ function signUpSuccess() {
 
 // function to create and display the error message
 function errorMessage() {
+
+    // remove previous error message
+    const prevError = document.querySelector('.error-message');
+    if (prevError) {
+        prevError.remove();
+    }
+
     // change the color of the email border and border color
     email.className = 'email-error';
 
