@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* 
+    colors
+    primary
+    Tomato: hsl(4, 100%, 67%)
+
+    neutral
+    Dark Slate Grey: hsl(234, 29%, 20%)
+    Charcoal Grey: hsl(235, 18%, 26%)
+    Grey: hsl(231, 7%, 60%)
+    White: hsl(0, 0%, 100%)
+
+*/
+
+:root {
+    --button-color: hsl(234, 29%, 20%);
+    --background-color: hsl(235, 18%, 26%);
+    --button-hover-color: hsl(4, 100%, 67%);
+    --placeholder-color: hsl(231, 7%, 60%);
+    --white-color: hsl(0, 0%, 100%);
+    --error-color: rgb(255, 89, 89);
+    --linear-gradient: linear-gradient(to right,  hsl(4, 100%, 67%) 50%, hsl(19, 87%, 56%));
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'roboto', 'sans-serif';
+    color: var(--button-color);
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+/* Card Body style */
+
+.card-body {
+    /* max-width: 800px; */
+    padding: 20px;
+    /* padding-left: 13px; */
+    background-color: var(--white-color);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* newsletter content style */
+
+.newsletter-card {
+    max-width: 450px;
+    margin: auto 0;
+    padding: 0 40px;
+    padding-right: 53px;
+}
+
+.description-div {
+    margin-bottom: 30px;
+}
+
+.description-div .header {
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+}
+
+.description-div .hero-text {
+    margin-bottom: 20px;
+}
+
+.description-div .list-item {
+    list-style: none;
+}
+
+.description-div .product-description {
+    margin: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.description-div .product-description img {
+    padding-right: 15px;
+}
+
+/* email style */
+
+.email-div .email-label {
+    font-weight: 700;
+    /* margin-bottom: 30px; */
+}
+
+.email-div input[type="email"] {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--placeholder-color);
+    border-radius: 5px;
+    padding: 15px 25px;
+    margin: 10px 0 20px 0;
+}
+
+button {
+    border: 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px 25px;
+    background-color: var(--button-color);
+    color: var(--white-color);
+    transition: all 0.2s ease-in;
+}
+
+button:hover {
+    cursor: pointer;
+    background: var(--linear-gradient);
+    box-shadow: 2px 10px 15px hsla(17, 100%, 67%, 0.753);
+}
+
+button:not(:hover) {
+    transition: none;
+}
+
+
+/* success message styles */
+
+.success {
+    display: none;
+    max-width: 400px;
+    padding: 45px;
+}
+
+.success img {
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+.success .header {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.success p {
+    margin-bottom: 40px;
+    font-size: .7rem;
+}
+
+/* error message span */
+.error-message {
+    color: var(--error-color);
+    float: right;
+}
+
+.email-error {
+    border: 1px solid var(--error-color) !important;
+    background-color:  rgb(253, 198, 198);
+}
+
+.email-error::placeholder {
+    color: var(--error-color);
+
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-color: var(--white-color);
+        height: fit-content;
+        /* overflow: hidden; */
+
+    }
+
+    .card-body {
+        flex-direction: column;
+        padding: 0 ;
+        margin-bottom: 50px;
+    }
+
+    .newsletter-card {
+        order: 2;
+        padding: 0 30px;
+    }
+
+    .image-div {
+        order: 1;
+        height: 240px;
+        position: relative;
+        background: url("/images/illustration-sign-up-mobile.svg") center no-repeat;
+        background-size: 100%;
+        margin-bottom: 50px;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .image-div img#left-image {
+        display: none;
+    }
+
+    .description-div .header {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .description-div .hero-text {
+        margin-bottom: 35px;
+    }
+
+    .email-div {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+    
+    .email-div input[type="email"] {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    /* sign up success */
+
+    .success {
+        max-width: 400px;
+        height: 100vh;
+        padding: 45px;
+    }
+
+    .mobile-div {
+        margin-top: 100px;
+    }
+
+    .success img {
+        width: 80px;
+        margin-bottom: 50px;
+    }
+    
+    .success .header {
+        margin-bottom: 35px;
+        font-size: 2rem;
+    }
+    
+    .success p {
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .card-body {
+        margin: 0;
+    }
+}
