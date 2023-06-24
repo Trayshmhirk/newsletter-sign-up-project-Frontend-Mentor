@@ -92,8 +92,8 @@ This may not be the best way to validate an email (using Regular Expressions, wh
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/@Trayshmhirk)
-- Twitter - [@yourusername](https://www.twitter.com/TrayShmhirk01)
+- Frontend Mentor - [@trayshmhirk](https://www.frontendmentor.io/profile/@Trayshmhirk)
+- Twitter - [@TrayShmhirk01](https://www.twitter.com/TrayShmhirk01)
 
 
 
